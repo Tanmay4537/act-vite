@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 400">
+  <defs>
+    <linearGradient id="blurple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7289DA" />
+      <stop offset="100%" stop-color="#5865F2" />
+    </linearGradient>
+    <linearGradient id="violet-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5865F2" />
+      <stop offset="100%" stop-color="#EB459E" />
+    </linearGradient>
+    <radialGradient id="faint-glow" cx="40%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(88, 101, 242, 0.06)" />
+      <stop offset="100%" stop-color="rgba(13, 17, 23, 0)" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#21262d" opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1500" height="400" fill="#0d1117" />
+  <rect width="1500" height="400" fill="url(#grid)" />
+  <rect width="1500" height="400" fill="url(#faint-glow)" />
+
+  <!-- Zone 1: Logo & Name (Left) -->
+  <g transform="translate(60, 0)">
+    <!-- Logo Icon -->
+    <g transform="translate(0, 100) scale(0.23)">
+      <path d="M120 80 L320 80 L220 280 L300 280 L160 460 L190 260 L120 260 Z" fill="url(#blurple-grad)" />
+      <path d="M350 140 L440 140 L280 440 L230 440 Z" fill="url(#violet-grad)" />
+    </g>
+
+    <!-- Wordmark -->
+    <text x="0" y="270" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="64" letter-spacing="-2">
+      <tspan fill="#e6edf3">Act</tspan><tspan fill="#5865F2">-Vite</tspan>
+    </text>
+
+    <!-- Version Badge -->
+    <rect x="0" y="300" width="70" height="24" rx="4" fill="#21262d" />
+    <text x="35" y="316" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="12" fill="#8b949e" text-anchor="middle">v0.1.0</text>
+
+    <!-- Category Label -->
+    <text x="85" y="316" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="11" fill="#484f58" letter-spacing="2" text-transform="uppercase">
+      discord activity framework
+    </text>
+  </g>
+
+  <!-- Divider 1 -->
+  <line x1="400" y1="80" x2="400" y2="320" stroke="#21262d" stroke-width="1" />
+
+  <!-- Zone 2: Tagline (Center) -->
+  <g transform="translate(460, 190)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="32" fill="#e6edf3" letter-spacing="-0.5">
+      Discord Activities,
+    </text>
+    <text x="0" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="36" fill="#5865F2" letter-spacing="-0.5">
+      without the headache.
+    </text>
+
+    <!-- Feature Pills -->
+    <text x="0" y="100" font-family="system-ui, -apple-system, sans-serif" font-weight="500" font-size="14" fill="#8b949e" letter-spacing="0.5">
+      Auth · Proxying · Participants · TypeScript · React · Vue · Svelte
+    </text>
+  </g>
+
+  <!-- Divider 2 -->
+  <line x1="940" y1="80" x2="940" y2="320" stroke="#21262d" stroke-width="1" />
+
+  <!-- Zone 3: Code Snippet (Right) -->
+  <g transform="translate(1000, 80)">
+    <!-- Editor Window -->
+    <rect width="440" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    
+    <!-- Top Bar -->
+    <path d="M 0 8 Q 0 0 8 0 L 432 0 Q 440 0 440 8 L 440 32 L 0 32 Z" fill="#0d1117" />
+    <circle cx="16" cy="16" r="5" fill="#ff5f57" />
+    <circle cx="32" cy="16" r="5" fill="#febc2e" />
+    <circle cx="48" cy="16" r="5" fill="#28c840" />
+    <text x="220" y="21" font-family="'JetBrains Mono', monospace" font-size="12" fill="#8b949e" text-anchor="middle">main.ts</text>
+    <line x1="0" y1="32" x2="440" y2="32" stroke="#30363d" stroke-width="1" />
+
+    <!-- Code Content -->
+    <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="14" font-weight="500" letter-spacing="0">
+      <text x="24" y="64">
+        <tspan fill="#ff7b72">import</tspan> <tspan fill="#e6edf3">{ createActivity }</tspan> <tspan fill="#ff7b72">from</tspan> <tspan fill="#a5d6ff">'actvite'</tspan>
+      </text>
+      
+      <text x="24" y="104">
+        <tspan fill="#ff7b72">const</tspan> <tspan fill="#e6edf3">activity =</tspan> <tspan fill="#ff7b72">await</tspan> <tspan fill="#d2a8ff">createActivity</tspan><tspan fill="#e6edf3">({</tspan>
+      </text>
+      
+      <text x="40" y="128">
+        <tspan fill="#e6edf3">clientId:</tspan> <tspan fill="#e6edf3">env.</tspan><tspan fill="#79c0ff">DISCORD_CLIENT_ID</tspan><tspan fill="#e6edf3">,</tspan>
+      </text>
+      
+      <text x="24" y="152" fill="#e6edf3">})</text>
+      
+      <text x="24" y="192" fill="#8b949e" font-style="italic">// That's it. You're done.</text>
+      <text x="24" y="216">
+        <tspan fill="#e6edf3">console.</tspan><tspan fill="#d2a8ff">log</tspan><tspan fill="#e6edf3">(activity.user.username)</tspan>
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Border -->
+  <line x1="0" y1="399" x2="1500" y2="399" stroke="#21262d" stroke-width="2" />
+</svg>

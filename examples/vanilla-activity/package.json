@@ -1,0 +1,17 @@
+{
+    "name": "vanilla-activity-example",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "actvite": "workspace:*"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.0",
+        "vite": "^5.1.0"
+    }
+}

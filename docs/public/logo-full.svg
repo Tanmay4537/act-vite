@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64">
+  <defs>
+    <linearGradient id="blurple-grad-nav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7289DA" />
+      <stop offset="100%" stop-color="#5865F2" />
+    </linearGradient>
+    <linearGradient id="violet-grad-nav" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5865F2" />
+      <stop offset="100%" stop-color="#EB459E" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Icon (scaled down to 48x48, centered vertically) -->
+  <g transform="translate(0, 8) scale(0.09375)">
+    <path d="M120 80 L320 80 L220 280 L300 280 L160 460 L190 260 L120 260 Z" fill="url(#blurple-grad-nav)" />
+    <path d="M350 140 L440 140 L280 440 L230 440 Z" fill="url(#violet-grad-nav)" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="64" y="44" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="32" letter-spacing="-1">
+    <tspan fill="#e6edf3">Act</tspan><tspan fill="#5865F2">-Vite</tspan>
+  </text>
+</svg>
