@@ -7,6 +7,19 @@
         "create-actvite": "./dist/index.js"
     },
     "main": "./dist/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jackson-peg/act-vite.git",
+        "directory": "packages/create-actvite"
+    },
+    "bugs": {
+        "url": "https://github.com/jackson-peg/act-vite/issues"
+    },
+    "homepage": "https://github.com/jackson-peg/act-vite#readme",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "files": [
         "dist"
     ],
