@@ -13,9 +13,9 @@
   <br />
 
   <a href="https://npmjs.com/package/act-vite">
-    <img src="https://img.shields.io/npm/v/act-vite?style=flat-square&colorA=0d1117&colorB=5865F2&label=npm" alt="npm version" />
+    <img src="https://img.shields.io/npm/v/actvite?style=flat-square&colorA=0d1117&colorB=5865F2&label=npm" alt="npm version" />
   </a>
-  <img src="https://img.shields.io/npm/dm/act-vite?style=flat-square&colorA=0d1117&colorB=5865F2&label=downloads" alt="npm downloads" />
+  <img src="https://img.shields.io/npm/dm/actvite?style=flat-square&colorA=0d1117&colorB=5865F2&label=downloads" alt="npm downloads" />
   <a href="https://github.com/jackson-peg/act-vite/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/jackson-peg/act-vite?style=flat-square&colorA=0d1117&colorB=5865F2" alt="MIT License" />
   </a>
