@@ -1,4 +1,4 @@
-![Act-Vite Banner](docs/public/banner.svg)
+
 
 <div align="center">
   <br />
